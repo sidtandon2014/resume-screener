@@ -9,10 +9,10 @@ class SkillType(str, Enum):
     SOFT_SKILL = 'soft-skill'
 
 class Skill(BaseModel):
-    """Skill required for the job"""
+    """Skill present in job description or resume fields"""
 
-    skill: str = Field(description="Required or preferred skill in candidate. This can be technical or soft skill ")
-    skill_type: SkillType = Field(description="type of skill in candidate.")
+    skill: str = Field(description="Skill present")
+    skill_type: SkillType = Field(description="type of skill.")
     experience: int = Field(default=None, description="Experience associated the skill.",)
     is_required: bool = Field(default = True, description="Is this skill required or preferred")    
 
@@ -21,9 +21,9 @@ class Skills(BaseModel):
     skills: List[Skill]
 
 class Experience(BaseModel):
-    """Required years of experience and the specific areas of experience sought"""
+    """Years of experience and the specific areas of experience sought"""
     experience: str = Field(description=(
-        "Detail the required years of experience and the specific areas of experience sought (e.g., "
+        "Detail the years of experience present in resume fields or job description (e.g., "
         "5+ years of experience in software development," 
         "3+ years of experience in project management within the healthcare industry"
         "Experience with testing frameworks"
@@ -41,8 +41,8 @@ class Qualification(BaseModel):
     is_required: bool = Field(default = True, description="Is this qualification required or preferred")    
 
 class PersonalityTrait(BaseModel):
-    """Specific personality trait present in job description"""
-    trait: str = Field(description="Specific personality traits present in job description")
+    """Specific personality trait"""
+    trait: str = Field(description="Specific personality traits present in job description or resume fields")
 
 class ResumeFields(BaseModel):
     skills: List[Skill] = Field(description="List of all the skills")
