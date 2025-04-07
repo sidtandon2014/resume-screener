@@ -11,7 +11,7 @@
 1. <a href="https://www.kaggle.com/datasets/saugataroyarghya/resume-dataset">Kaggle dataset</a> for candidate resume
 2. <a href="https://business.linkedin.com/talent-solutions/resources/how-to-hire-guides/software-engineer/job-description">Linkedin template</a> resume for job descrition (Extracted text is present inside experiments/data folder)
 
-### Notebooks/ src
+### Notebooks (Execute them in sequence)
 - **[experiments/target-cv-analyzer.ipynb](resume-screener/experiments/target-cv-analyzer.ipynb):** Parse linkedin job resume and get fields in structured format
 -  **[experiments/parse-candidate_resumes.ipynb](resume-screener/experiments/parse-candidate_resumes.ipynb):** Parse candidate resumes and get fields in structured format
 -  **[experiments/model.py](resume-screener/experiments/model.py):** Model definition for structured format
